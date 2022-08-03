@@ -2,7 +2,7 @@
     android:width="@dimen/_30sdp"
     android:height="@dimen/_30sdp"
     android:autoMirrored="true"
-    android:tint="@color/order_icon"
+    android:tint="@color/albumColorPrimaryBlack"
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path

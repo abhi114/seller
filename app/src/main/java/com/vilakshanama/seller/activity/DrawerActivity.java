@@ -3,6 +3,7 @@ package com.vilakshanama.seller.activity;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -68,7 +69,7 @@ public class DrawerActivity extends AppCompatActivity {
             if (session.isUserLoggedIn()) {
                 tvName.setText(session.getData(Constant.NAME));
                 tvMobile.setText(session.getData(Constant.EMAIL));
-                navigationView.getMenu().findItem(R.id.menu_customers).setVisible(session.getData(Constant.CUSTOMER_PRIVACY).equals("1"));
+                //navigationView.getMenu().findItem(R.id.menu_customers).setVisible(session.getData(Constant.CUSTOMER_PRIVACY).equals("1"));
             } else {
                 tvName.setText(getResources().getString(R.string.is_login));
             }
@@ -116,6 +117,30 @@ public class DrawerActivity extends AppCompatActivity {
                     case R.id.menu_logout:
                         session.logoutUserConfirmation(activity);
                         break;
+                    case R.id.how_to_use:
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.nizara.in/how-to-use/"));
+                        startActivity(intent);
+                        break;
+                    case R.id.Feedback:
+                        Intent intent1 = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.nizara.in/feedback/"));
+                        startActivity(intent1);
+                        break;
+                    case R.id.Contact_us:
+                        Intent intent2 = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.nizara.in/contact-us/"));
+                        startActivity(intent2);
+                        break;
+                    case R.id.website_visit:
+                        Intent intent3 = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.nizara.in/"));
+                        startActivity(intent3);
+                        break;
+                    case R.id.share:
+                        Intent intent4 = new Intent();
+                        intent4.setAction(Intent.ACTION_SEND);
+                        intent4.putExtra(Intent.EXTRA_TEXT,
+                                "Hey check out my app at: https://play.google.com/store/apps/details?id=com.onealldigital.nizara");
+                        intent4.setType("text/plain");
+                        startActivity(intent4);
+
                 }
                 return true;
             }

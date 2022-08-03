@@ -34,16 +34,65 @@
                     android:layout_alignParentTop="true"
                     android:orientation="horizontal"
                     android:padding="@dimen/_2sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/lytOrders"
+                        android:id="@+id/lytCustomers"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_2sdp"
                         android:layout_weight="1"
                         android:background="@drawable/card_shadow"
-                        app:cardCornerRadius="@dimen/_10sdp">
+                        app:cardCornerRadius="@dimen/_15sdp">
+
+                        <RelativeLayout
+                            android:layout_width="184dp"
+                            android:layout_height="150dp"
+                            android:background="@color/gray"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:id="@+id/imgBonus"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/ic_balance_2" />
+
+                            <TextView
+                                android:id="@+id/tvBalance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgBonus"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvBalance"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/earning"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_shadow"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -89,68 +138,18 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/lytCustomers"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_2sdp"
-                        android:layout_weight="1"
-                        android:background="@drawable/card_shadow"
-                        app:cardCornerRadius="@dimen/_10sdp">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/customer_bg"
-                            android:gravity="center"
-                            android:padding="@dimen/_10sdp">
-
-                            <ImageView
-                                android:id="@+id/imgBonus"
-                                android:layout_width="@dimen/_50sdp"
-                                android:layout_height="@dimen/_50sdp"
-                                android:layout_alignParentTop="true"
-                                android:layout_centerHorizontal="true"
-                                android:contentDescription="@string/app_name"
-                                app:srcCompat="@drawable/ic_balance" />
-
-                            <TextView
-                                android:id="@+id/tvBalance"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/imgBonus"
-                                android:layout_centerHorizontal="true"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_12sdp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/tvBalance"
-                                android:layout_centerHorizontal="true"
-                                android:text="@string/balance"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_10sdp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
                         android:id="@+id/lytProducts"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_2sdp"
                         android:layout_weight="1"
                         android:background="@drawable/card_shadow"
-                        app:cardCornerRadius="@dimen/_10sdp">
+                        app:cardCornerRadius="@dimen/_17sdp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/product_bg"
+                            android:background="@color/gray"
                             android:gravity="center"
                             android:padding="@dimen/_10sdp">
 
@@ -160,6 +159,7 @@
                                 android:layout_height="@dimen/_50sdp"
                                 android:layout_alignParentTop="true"
                                 android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_10sdp"
                                 android:contentDescription="@string/app_name"
                                 app:srcCompat="@drawable/ic_products" />
 
@@ -169,7 +169,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/imgBalance"
                                 android:layout_centerHorizontal="true"
-                                android:textColor="@color/white"
+                                android:textColor="@color/red"
                                 android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
                                 android:visibility="visible" />
@@ -180,7 +180,7 @@
                                 android:layout_below="@+id/tvProductsCount"
                                 android:layout_centerHorizontal="true"
                                 android:text="@string/products"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 android:textSize="@dimen/_10sdp"
                                 android:textStyle="bold" />
 
@@ -197,7 +197,8 @@
                     android:layout_below="@id/lyt_order_detail"
                     android:layout_margin="@dimen/_5sdp"
                     android:background="@drawable/card_shadow"
-                    app:cardCornerRadius="@dimen/_10sdp">
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:visibility="gone">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -212,7 +213,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/tvWeeklySales"
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
@@ -238,24 +239,67 @@
                 <LinearLayout
                     android:id="@+id/lyt_stock_detail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_120sdp"
                     android:layout_below="@+id/lytSales"
                     android:orientation="horizontal"
                     android:padding="@dimen/_2sdp"
                     android:weightSum="2">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/lytSoldOut"
+                        android:id="@+id/lytOrders"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_margin="@dimen/_2sdp"
                         android:layout_weight="1"
                         android:background="@drawable/card_shadow"
-                        app:cardCornerRadius="@dimen/_10sdp">
+                        app:cardCornerRadius="@dimen/_15sdp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_60sdp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:id="@+id/imgBonus31"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/ic_orders" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgBonus31"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_centerHorizontal="true"
+                                android:minLines="2"
+                                android:text="@string/successful_order"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/lytSoldOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_shadow"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_centerHorizontal="true"
                             android:background="@color/sold_out_bg">
 
@@ -290,17 +334,68 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/lytLowStock"
+                        android:id="@+id/lytCustomers"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_margin="@dimen/_2sdp"
                         android:layout_weight="1"
                         android:background="@drawable/card_shadow"
-                        app:cardCornerRadius="@dimen/_10sdp">
+                        app:cardCornerRadius="@dimen/_15sdp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_60sdp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:id="@+id/imgBonus"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/ic_balance_2" />
+
+                            <TextView
+                                android:id="@+id/tvWeeklySales"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgBonus"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvWeeklySales"
+                                android:layout_centerHorizontal="true"
+                                android:maxLines="2"
+                                android:text="@string/total_sales_in_last_wk"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/lytLowStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_shadow"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_centerHorizontal="true"
                             android:background="@color/low_stock_bg">
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Continent16 Seller</string>
+    <string name="app_name">Nizara Seller</string>
 
     <!-- ************************************************************************************************************* -->
     <!--    For privacy policy and terms and condition whatever you set words in privacy_policy and terms_conditions that words must be contain in msg_privacy_terms.Other wise app will crash-->
@@ -228,4 +228,17 @@
     <string name="error_msg_extra_product_image">Select extra product image!!!</string>
     <string name="select_delivery_boy">Select Delivery Boy</string>
     <string name="order_detail">Order Detail</string>
+    <string name="Earning_report">Earning Report</string>
+    <string name="Add_shop_details">Add Shop Details</string>
+    <string name="How_To_use">How To Use</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Contact_us">Contact Us</string>
+    <string name="Website_visit">Visit Our Website</string>
+    <string name="share">Share</string>
+    <string name="notification">Notification</string>
+    <string name="more">more</string>
+    <string name="register_as_seller">Register As Seller</string>
+    <string name="earning">EARNING</string>
+    <string name="successful_order">SUCCESSFUL ORDERS</string>
+    <string name="total_sales_in_last_wk">Total Sales In Last Week</string>
 </resources>

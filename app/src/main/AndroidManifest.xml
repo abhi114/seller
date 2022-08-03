@@ -21,45 +21,48 @@
     </queries>
 
     <application
-        android:name="com.vilakshanama.seller.helper.AppController"
-        android:icon="@mipmap/ic_launcher"
+        android:name=".helper.AppController"
+        android:icon="@mipmap/ic_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic">
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="true" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
         <activity
-            android:name="com.vilakshanama.seller.activity.ProductDetailActivity"
+            android:name=".activity.ProductDetailActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.WalletTransactionsListActivity"
+            android:name=".activity.WalletTransactionsListActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.ProductListActivity"
+            android:name=".activity.ProductListActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.CustomerListActivity"
+            android:name=".activity.CustomerListActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.OrderListActivity"
+            android:name=".activity.OrderListActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.OrderDetailActivity"
+            android:name=".activity.OrderDetailActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -70,24 +73,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.vilakshanama.seller.activity.DrawerActivity"
+            android:name=".activity.DrawerActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.WebViewActivity"
+            android:name=".activity.WebViewActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.vilakshanama.seller.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
         <service
-            android:name="com.vilakshanama.seller.helper.MyFirebaseMessagingService"
+            android:name=".helper.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -95,7 +98,7 @@
         </service>
 
         <provider
-            android:name="com.vilakshanama.seller.helper.album.provider.CameraFileProvider"
+            android:name=".helper.album.provider.CameraFileProvider"
             android:authorities="${applicationId}.app.file.provider"
             android:exported="false"
             android:grantUriPermissions="true"
@@ -106,27 +109,27 @@
         </provider>
 
         <activity
-            android:name="com.vilakshanama.seller.helper.album.app.gallery.GalleryActivity"
+            android:name=".helper.album.app.gallery.GalleryActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
         <activity
-            android:name="com.vilakshanama.seller.helper.album.app.gallery.GalleryAlbumActivity"
+            android:name=".helper.album.app.gallery.GalleryAlbumActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
         <activity
-            android:name="com.vilakshanama.seller.helper.album.app.album.NullActivity"
+            android:name=".helper.album.app.album.NullActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
         <activity
-            android:name="com.vilakshanama.seller.helper.album.app.album.GalleryActivity"
+            android:name=".helper.album.app.album.GalleryActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
         <activity
-            android:name="com.vilakshanama.seller.helper.album.app.album.AlbumActivity"
+            android:name=".helper.album.app.album.AlbumActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
         <activity
-            android:name="com.vilakshanama.seller.helper.album.app.album.camera.CameraActivity"
+            android:name=".helper.album.app.album.camera.CameraActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
     </application>

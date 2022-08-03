@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/bg_color"
+        android:background="#D3D3D3"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/lyt_header"
         app:menu="@menu/drawer_menu" />

@@ -8,6 +8,20 @@
         android:title="@string/search"
         android:visible="false"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/toolbar_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/notification"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/drawer"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/toolbar_sort"
         android:icon="@drawable/ic_sort"

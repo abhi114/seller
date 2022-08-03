@@ -64,9 +64,7 @@ public class ProductListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
-
         toolbar = findViewById(R.id.toolbar);
-
         from = getIntent().getStringExtra("from");
 
         setSupportActionBar(toolbar);
@@ -385,9 +383,10 @@ public class ProductListActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        menu.findItem(R.id.toolbar_search).setVisible(true);
-        menu.findItem(R.id.toolbar_sort).setVisible(true);
-        menu.findItem(R.id.toolbar_filter).setVisible(true);
+        menu.findItem(R.id.toolbar_notification).setVisible(true);
+        menu.findItem(R.id.drawer).setVisible(true);
+        //menu.findItem(R.id.toolbar_sort).setVisible(true);
+        //menu.findItem(R.id.toolbar_filter).setVisible(true);
         invalidateOptionsMenu();
         return super.onPrepareOptionsMenu(menu);
     }
