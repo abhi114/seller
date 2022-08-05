@@ -29,6 +29,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/borders" />
+
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="true" />

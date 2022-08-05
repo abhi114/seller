@@ -356,7 +356,7 @@
                                 android:layout_alignParentTop="true"
                                 android:layout_centerHorizontal="true"
                                 android:contentDescription="@string/app_name"
-                                app:srcCompat="@drawable/ic_balance_2" />
+                                app:srcCompat="@drawable/ic_hand_money_icon" />
 
                             <TextView
                                 android:id="@+id/tvWeeklySales"

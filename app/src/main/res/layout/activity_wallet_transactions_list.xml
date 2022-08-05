@@ -39,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:background="@color/Default_Blue"
+                    android:background="@drawable/card_shadow_2"
                     android:padding="@dimen/_10sdp">
 
                     <TextView
@@ -48,10 +48,11 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
+                        android:breakStrategy="balanced"
                         android:layout_marginStart="@dimen/_5sdp"
-                        android:text="@string/your_balance"
+                        android:text="@string/withdrawal_balance"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/colorPrimaryLight" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/tvBalance"
@@ -60,23 +61,25 @@
                         android:layout_below="@+id/tvTitleBalance"
                         android:layout_marginStart="@dimen/_5sdp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/red"
                         android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btnSendWithdrawalRequest"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_11sdp"
                         android:layout_below="@id/tvBalance"
                         android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_28sdp"
                         android:layout_marginEnd="@dimen/_5sdp"
-                        android:background="@drawable/card_shadow"
+                        android:background="@drawable/card_shadow_3"
                         android:text="@string/send_withdrawal_request"
-                        android:textAllCaps="false"
-                        android:textColor="@color/Default_Blue"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/mid_text"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
 
                 </RelativeLayout>
 

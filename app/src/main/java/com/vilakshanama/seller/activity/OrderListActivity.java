@@ -170,7 +170,7 @@ public class OrderListActivity extends AppCompatActivity {
                                 btnStartDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
                                 startDate = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
                                 btnEndDate.setEnabled(true);
-                                btnEndDate.setBackground(getResources().getDrawable(R.drawable.bg_button));
+                                //btnEndDate.setBackground(getResources().getDrawable(R.drawable.bg_button));
                                 tempDate.set(year, monthOfYear, dayOfMonth);
                             }
                         }, mYear, mMonth, mDay);
